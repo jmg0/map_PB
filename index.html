@@ -67,11 +67,11 @@ map.on('click', 'lyr_Buttigieg_b1_1_0', function (e) {
     var description = '<table>\
                     <tr>\
                         <th scope="row">Total Contributed</th>\
-                        <td>' + (e.features[0].properties['Contribution'] !== null ? Autolinker.link(e.features[0].properties['Contribution'].toLocaleString(), {truncate: {length: 30, location: 'smart'}}) : '') + '</td>\
+                        <td>' + (e.features[0].properties['Contribution'] !== null ? ('$' + Autolinker.link(e.features[0].properties['Contribution'].toLocaleString(), {truncate: {length: 30, location: 'smart'}})) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row"># Contributions</th>\
-                        <td>' + (e.features[0].properties['Num_Contributions'] !== null ? ('$' + Autolinker.link(e.features[0].properties['Num_Contributions'].toLocaleString(), {truncate: {length: 30, location: 'smart'}})) : '') + '</td>\
+                        <td>' + (e.features[0].properties['Num_Contributions'] !== null ? Autolinker.link(e.features[0].properties['Num_Contributions'].toLocaleString(), {truncate: {length: 30, location: 'smart'}}) : '') + '</td>\
                     </tr>\
                 </table>'
 
